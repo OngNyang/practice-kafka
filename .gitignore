@@ -1,0 +1,73 @@
+# Java
+*.class
+*.jar
+*.war
+*.ear
+
+# 로그 파일
+*.log
+
+# OS 별 임시 파일
+.DS_Store
+Thumbs.db
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+# VSCode
+.vscode/
+
+# Eclipse
+.project
+.classpath
+.settings/
+bin/
+target/
+
+# Maven 빌드 결과물 (Maven 사용하는 경우)
+target/
+
+# Gradle 빌드 결과물 (Gradle 사용하는 경우)
+build/
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+
+# 임시 파일
+*.swp
+*.swo
+*.tmp
+
+# 테스트 리포트
+test-output/
+
+# 환경설정 파일 (개인별 비공개 정보)
+*.env
+.env*
+application-local.yml
+application-*.yml
+application-*.properties
+!application.yml
+!application.properties
+
+# Spring Boot DevTools
+.spring-boot-devtools.properties
+
+# Lombok
+lombok.config
+
+# 자주 사용하는 백업 확장자
+*.bak
+*.old
+*.orig
+*.rej
+
+# node.js (프론트엔드 포함된 경우)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 기타
+*.log
