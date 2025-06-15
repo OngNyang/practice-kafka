@@ -27,12 +27,12 @@ info "Kafka 토픽 'test-topic'을 생성합니다..."
 docker exec "$KAFKA_CONTAINER_NAME" /opt/bitnami/kafka/bin/kafka-topics.sh \
   --create \
   --topic test-topic \
-  --bootstrap-server kafka1:9092,kafka2:9093 \
+  --bootstrap-server localhost:9092,localhost:9093 \
   --partitions 3 \
-  --replication-factor 2
+  --replication-factor 2 || true
 
 # 5. 토픽 목록 확인
 info "Kafka 토픽 목록을 확인합니다..."
 docker exec "$KAFKA_CONTAINER_NAME" /opt/bitnami/kafka/bin/kafka-topics.sh \
   --list \
-  --bootstrap-server kafka1:9092
+  --bootstrap-server localhost:9092
