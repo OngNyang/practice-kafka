@@ -1,8 +1,13 @@
 package org.example.kafkaconsumerbe.config;
 
+import org.example.kafkaconsumerbe.user.service.MyUserDetailsService;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
 
 @Configuration
@@ -27,4 +32,15 @@ public class SecurityConfig {
                 );
         return http.build();
     }
+
+    @Bean
+    public UserDetailsService userDetailsService(MyUserDetailsService myService) {
+        return myService;
+    }
+
+    @Bean
+    public PasswordEncoder passwordEncoder() {
+        return new BCryptPasswordEncoder();
+    }
+
 }

@@ -1,4 +1,4 @@
-package org.example.kafkaconsumerbe.User.model;
+package org.example.kafkaconsumerbe.user.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
